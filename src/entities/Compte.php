@@ -18,7 +18,13 @@ class Compte
 
     /** @orm\Column(type="integer") **/
     private $solde;
-    
+
+    /**
+     * Many to one
+     * Many "compte" have one "client". This is the owning side.
+     * @orm\ManyToOne(targetEntity="Client", inversedBy="comptes")
+     * @orm\JoinColumn(name="client_id", referencedColumnName="id")
+     */
     private $client;
 
     public function __construct()

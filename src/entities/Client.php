@@ -2,6 +2,8 @@
 
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+
 
 /**
  *  @orm\Entity @orm\Table(name="client")
@@ -25,12 +27,16 @@ class Client
     /** @orm\Column(type="integer") **/
     private $numero;
 
-    /** @orm\Column(type="string") **/
-    private $compte;
+    /**
+     * One to many
+     * One "client" has many "comptes". This is the inverse side.
+     * @orm\OneToMany(targetEntity="Compte", mappedBy="client")
+     */
+    private $comptes;
 
     public function __construct()
     {
-        
+        $this->comptes = new ArrayCollection();
     }
 
 
@@ -94,15 +100,15 @@ class Client
     }
 
     
-    public function getCompte()
+    public function getComptes()
     {
-        return $this->compte;
+        return $this->comptes;
     }
 
     
     public function setCompte($compte)
     {
-        $this->compte = $compte;
+        $this->comptes = $compte;
     }
 }
 
