@@ -13,12 +13,7 @@ $actu=$a[count($a)-1];
     // echo '';
     // echo strcmp($actu, "accueil");
     function getPublicPath($actu){
-        if(strcmp($actu, "accueil")==0){
-            echo"public/template";
-        }
-        else{
-            echo "public/template";
-        }
+        echo "../src/public/template";
     }
     
 
@@ -45,7 +40,7 @@ $actu=$a[count($a)-1];
     <link rel="stylesheet" href="<?php getPublicPath($actu) ?>/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="<?php getPublicPath($actu) ?>/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <!-- squall -->
-    <link rel="stylesheet" href="public/css/squall.css">
+    <link rel="stylesheet" href="../src/public/css/squall.css">
     <title>Banque du peuple</title>
 </head>
 
@@ -94,7 +89,7 @@ $actu=$a[count($a)-1];
 
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    Bienvenue <?=$_SESSION['login']?>
+                                    Bienvenue 
                                 </li>
 
                             </ul>
@@ -111,9 +106,9 @@ $actu=$a[count($a)-1];
                             <li class="nav-item ">
                                 <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
                                     data-target="#submenu-1" aria-controls="submenu-1"><i
-                                        class="fa fa-fw fa-user-circle"></i>Clients : <?=nbr_client()[0]?><span
+                                        class="fa fa-fw fa-user-circle"></i>Clients : <span
                                         class="badge badge-success">6</span></a>
-                                <div id="submenu-1" class="collapse submenu" style="">
+                                <div id="submenu-1" class="collapse submenu" >
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="ad_client">Ajouter</a>
@@ -136,9 +131,9 @@ $actu=$a[count($a)-1];
                             <li class="nav-item ">
                                 <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
                                     data-target="#submenu-2" aria-controls="submenu-2"><i
-                                        class="fab fa-fw fa-wpforms"></i>Comptes : <?=nbr_compte()[0]?><span
+                                        class="fab fa-fw fa-wpforms"></i>Comptes : <span
                                         class="badge badge-success">6</span></a>
-                                <div id="submenu-2" class="collapse submenu" style="">
+                                <div id="submenu-2" class="collapse submenu" >
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="ad_compte">Ajouter</a>

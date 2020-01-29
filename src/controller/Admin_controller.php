@@ -1,6 +1,7 @@
 <?php
 
-namespace src\controller;
+
+
 
 use libs\system\Controller;
 use src\model\Admin_db;
@@ -19,12 +20,13 @@ class Admin_controller extends Controller{
 
     public function connect()
     {
-        echo "squall";
         $login = $_POST['login'];
-        $pwd = $_POST['pwd'];
+        $pwd = $_POST['mdp'];
+        
         $admin_dao = new Admin_db();
-        $admin = $admin_dao->connect($login, $pwd);
-        return $this->view->load("accueil", $admin);
+        $admin_dao->connect($login, $pwd);
+        
+        return $this->view->load("accueil");
     }
 
     public function delete($id){

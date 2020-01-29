@@ -1,10 +1,10 @@
 <?php
 
 require_once "config/autoload.php";
-$mvc = new libs\system\BootStrap();
+
+use libs\system\BootStrap;
+
+$mvc = new BootStrap();
 
 ?>
     
-</body>
- 
-</html>

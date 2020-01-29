@@ -56,7 +56,7 @@ if(isset($_GET["url"])){
             $controller_file="src/controller/Admin_controller.php";
             require_once $controller_file;
             $file="Admin_controller";
-            $controller_object = new $file;
+            $controller_object = new $file();
             $controller_object->boot();
         }
         

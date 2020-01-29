@@ -19,7 +19,7 @@ class Autoloader{
         if (file_exists(str_replace("\\", "/", $class.".php"))) {
             require_once str_replace("\\", "/", $class.".php");
         }else {
-            die("Merci d'utiliser le mot cle USE suivi de ".$class);
+            // die("Merci d'utiliser le mot cle USE suivi de ".$class);
         }
     }
 }
