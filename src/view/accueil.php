@@ -1,4 +1,11 @@
+<?php
 
+           
+// echo $_SESSION['login'];
+// echo $_SESSION['mdp'];
+// die();
+
+?>
 
 <!-- ============================================================== -->
 <!-- header -->
@@ -43,7 +50,7 @@
                         <img class="card-img" src="../src/public/img/client.png" alt="Card image">
                         <div class="card-img-overlay">
 
-                            <a href="client" class="btn btn-primary">GESTION DES CLIENTS</a>
+                            <a href="../Client/list_client" class="btn btn-primary">GESTION DES CLIENTS</a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +60,7 @@
                         <img class="card-img" src="../src/public/img/compte.jpg" alt="Card image">
                         <div class="card-img-overlay">
 
-                            <a href="comptes" class="btn btn-primary">GESTION DES COMPTES</a>
+                            <a href="../Compte/list_compte" class="btn btn-primary">GESTION DES COMPTES</a>
                         </div>
                     </div>
                 </div>

@@ -11,5 +11,15 @@ class Controller
     {
         $this->view=  new View();
     }
+
+    // public function accueil()
+    // {
+    //     header("location: http://localhost/projects/banqueDuPeuple_orm/accueil");
+    // }
+    
+    // public function connexion()
+    // {
+    //     header("location: http://localhost/projects/banqueDuPeuple_orm/");
+    // }
 }
 

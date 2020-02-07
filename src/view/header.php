@@ -1,9 +1,6 @@
 <?php
 
-// récupérer le dernier mot de l'url
-$url = $_SERVER['REQUEST_URI']; 
-$a = explode('/', $url);
-$actu=$a[count($a)-1];
+
 
 
     
@@ -12,7 +9,7 @@ $actu=$a[count($a)-1];
     // echo strlen($actu);
     // echo '';
     // echo strcmp($actu, "accueil");
-    function getPublicPath($actu){
+    function getPublicPath(){
         echo "../src/public/template";
     }
     
@@ -29,16 +26,16 @@ $actu=$a[count($a)-1];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php getPublicPath($actu) ?>/vendor/bootstrap/css/bootstrap.min.css">
-    <link href="<?php getPublicPath($actu) ?>/vendor/fonts/circular-std/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php getPublicPath($actu) ?>/libs/css/style.css">
-    <link rel="stylesheet" href="<?php getPublicPath($actu) ?>/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" href="<?php getPublicPath($actu) ?>/vendor/charts/chartist-bundle/chartist.css">
-    <link rel="stylesheet" href="<?php getPublicPath($actu) ?>/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="<?php getPublicPath() ?>/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="<?php getPublicPath() ?>/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php getPublicPath() ?>/libs/css/style.css">
+    <link rel="stylesheet" href="<?php getPublicPath() ?>/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="<?php getPublicPath() ?>/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="<?php getPublicPath() ?>/vendor/charts/morris-bundle/morris.css">
     <link rel="stylesheet"
-        href="<?php getPublicPath($actu) ?>/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="<?php getPublicPath($actu) ?>/vendor/charts/c3charts/c3.css">
-    <link rel="stylesheet" href="<?php getPublicPath($actu) ?>/vendor/fonts/flag-icon-css/flag-icon.min.css">
+        href="<?php getPublicPath() ?>/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="<?php getPublicPath() ?>/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="<?php getPublicPath() ?>/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <!-- squall -->
     <link rel="stylesheet" href="../src/public/css/squall.css">
     <title>Banque du peuple</title>
@@ -59,7 +56,7 @@ $actu=$a[count($a)-1];
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="accueil">Banque du peuple</a>
+                <a class="navbar-brand" href="../Admin/connect">Banque du peuple</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -111,13 +108,13 @@ $actu=$a[count($a)-1];
                                 <div id="submenu-1" class="collapse submenu" >
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="ad_client">Ajouter</a>
+                                            <a class="nav-link" href="../Client/add_client">Ajouter</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="client">Modifier</a>
+                                            <a class="nav-link" href="../Client/list_client">Modifier</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="client">Supprimer</a>
+                                            <a class="nav-link" href="../Client/list_client">Supprimer</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -136,13 +133,13 @@ $actu=$a[count($a)-1];
                                 <div id="submenu-2" class="collapse submenu" >
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="ad_compte">Ajouter</a>
+                                            <a class="nav-link" href="../Compte/add_compte">Ajouter</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="comptes">Modifier</a>
+                                            <a class="nav-link" href="../Compte/list_compte">Modifier</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="comptes">Supprimer</a>
+                                            <a class="nav-link" href="../Compte/list_compte">Supprimer</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -158,7 +155,7 @@ $actu=$a[count($a)-1];
 
                             </li>
                             <li class="nav-divider">
-                                <a href="connect"> Déconnecter</a>
+                                <a href="../Admin/disconnect"> Déconnecter</a>
 
                             </li>
 

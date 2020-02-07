@@ -38,10 +38,11 @@ class View
                 }
                 break;
             case 3:
-                $file = "src/view/".$args[0]."/".$args[1].".php";
+                $file = "src/view/".$args[0].".php";
                 
                 if (file_exists($file)) {
-                    $data = $args[2];
+                    $data = array($args[1], $args[2]);
+                    // $data = $args[2];
                     require_once $file;
                 }else {
                     die($file." n'existe pas comme vue");
@@ -49,7 +50,6 @@ class View
                 break;
             
             default:
-                # code...
                 break;
         }
 
