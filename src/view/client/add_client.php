@@ -14,7 +14,7 @@
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-        <a href="client" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
+        <a href="list_client" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
 
         <div class="page-header">
 
@@ -45,7 +45,7 @@
 <div class="splash-container">
         <div class="card ">
             <div class="card-body">
-            <form action="ctrl_clt" method="post" class="needs-validation" >
+            <form action="create_client" method="post" class="needs-validation" >
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                             <label for="nom">Nom</label>

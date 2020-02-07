@@ -32,7 +32,7 @@ if(isset($_GET["url"])){
                     }
                 }
                 
-                if(isset($url[3])){
+                if(isset($url[2])){
                     $method = $url[1];
                     if(method_exists($controller_object, $method)){
                         $controller_object->$method($url[2], $url[3]);

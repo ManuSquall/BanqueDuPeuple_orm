@@ -4,6 +4,7 @@ namespace src\model;
 
 use Exception;
 use libs\system\Model;
+use src\entities\Compte;
 
 class Compte_db extends Model{
 

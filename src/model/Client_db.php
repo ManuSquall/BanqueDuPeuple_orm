@@ -2,6 +2,7 @@
 
 namespace src\model;
 
+use Client;
 use Exception;
 use libs\system\Model;
 
@@ -31,6 +32,19 @@ class Client_db extends Model{
 
         return $res;
     }
+
+    public function add_client($data){
+        $c = new Client();
+
+        $c->setNom($data[0]);
+        $c->setPrenom($data[1]);
+        $c->setAdresse($data[2]);
+        $c->setNumero($data[3]);
+
+        self::$getManager->persist($c);
+        self::$getManager->flush();
+    }
+
 
 }
 

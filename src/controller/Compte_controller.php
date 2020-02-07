@@ -15,9 +15,10 @@ class Compte_controller extends Controller{
     // }
 
     public function list_compte(){
-
+        
         $compte_dao = new Compte_db();
-
+        // echo 1;
+        // die();
         $liste_compte = $compte_dao->get_compte();
         
         return $this->view->load("compte/list_compte", $liste_compte);
@@ -58,10 +59,10 @@ class Compte_controller extends Controller{
         return $numero;
     }
 
-    public function create_compte(){
+    // public function create_compte(){
 
-        $c = new Compte();
-    }
+    //     $c = new Compte();
+    // }
 
     
 
